@@ -1,0 +1,35 @@
+body {
+  background-color: #242424;
+  color: #c5c5c5;
+  padding: 4.21rem;
+}
+
+.layout {
+  display: flex;
+  gap: 16px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+a {
+  color: #878787;
+}
+
+a:hover {
+  color: #dcdcdc;
+}
+
+h1 {
+  font-size: 1.2rem;
+  margin: 0.662rem 0;
+}
+
+ul h2 {
+  display: inline;
+  font-size: 1rem;
+  margin: 0;
+}
