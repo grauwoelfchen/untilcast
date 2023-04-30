@@ -6,13 +6,18 @@ body {
 
 .layout {
   display: flex;
-  gap: 16px;
+  justify-content: center;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.72rem;
+  margin-right: 1.82rem;
+}
+
+.page {
+  width: 55rem;
 }
 
 a {
@@ -23,13 +28,113 @@ a:hover {
   color: #dcdcdc;
 }
 
+a.disabled, a.disabled:hover,
+a[disabled], a[disabled]:hover {
+  color: #444444;
+  pointer-events: none;
+}
+
+span.number {
+  color: #445541;
+  display: inline-block;
+  font-family: monospace;
+  margin: 0 0.86rem 0 0;
+}
+
+span.date {
+  color: #637588;
+}
+
 h1 {
   font-size: 1.2rem;
-  margin: 0.662rem 0;
+  margin: 1.162rem 0 0.66rem 0;
+}
+
+h2 {
+  font-size: 1.05rem;
+  margin: 1.162rem 0 0.42rem 0;
+}
+
+h3 {
+  font-size: 0.91rem;
+  margin: 1.162rem 0 0.28rem 0;
+}
+
+.breadcrumbs {
+  margin-top: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  padding: 0;
 }
 
 ul h2 {
-  display: inline;
+  display: block;
   font-size: 1rem;
+  padding: 0;
+  margin: 0.165rem 0 0.1946rem 0;
+}
+
+blockquote {
+  background: #111111;
+  border-radius: 0.18rem;
+  margin: 0.889rem 0 0.219rem 0;
+  padding: 0.68rem 0.821rem;
+}
+
+blockquote p {
   margin: 0;
+  padding: 0;
+}
+
+blockquote p::before {
+  content: '\201C';
+}
+
+blockquote p::after {
+  content: '\201D';
+}
+
+figcaption {
+  margin: 0.21rem 0 0 0;
+}
+
+.tags {
+  margin-left: -0.14rem !important;
+}
+
+ul.tags li {
+  display: inline-block;
+  list-style: none;
+}
+
+.tag {
+  background: #192324;
+  border-radius: 0.18rem;
+  color: darkgray;
+  padding: 0.21rem 0.43rem;
+  margin: 0.52rem 0.749rem 0.52rem 0;
+}
+
+.tags,
+.description,
+.screencast {
+  margin: 0.757rem 0 1.26rem 0;
+}
+
+.video {
+  margin: 0.21rem 0;
+  max-width: 55rem;
+}
+
+pre {
+  background: #111111;
+  border-radius: 0.18rem;
+  margin: 0.83rem 0 0 0;
+  padding: 0.39rem 0.53rem;
 }

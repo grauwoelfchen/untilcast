@@ -2,6 +2,8 @@
 
 Unutterd TIL screencasts. Learn something until kingdom come ;)
 
+![Screenshot](img/screenshot.png?raw=true "Screenshot")
+
 
 ## Prerequisites
 

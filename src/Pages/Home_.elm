@@ -1,9 +1,8 @@
 module Pages.Home_ exposing (page)
 
 import Components.Sidebar
-import Html exposing (Html)
-import Html.Attributes as Attr
-import Layouts
+import Html as H exposing (Html)
+import Html.Attributes as A
 import View exposing (View)
 
 
@@ -13,17 +12,17 @@ page =
     { page =
       { title = "Until"
       , body =
-        [ Html.text "/"
-        , Html.h1 [] [ Html.text "Episodes" ]
-        , Html.div []
-          [ Html.ul []
-            [ Html.li []
-              [ Html.a [ Attr.href "/episode/1" ]
-                [ Html.h2 [] [ Html.text "#1 TIL xxx" ] ]
-              ]
-            , Html.li []
-              [ Html.a [ Attr.href "/episode/0" ]
-                [ Html.h2 [] [ Html.text "#0 TIL xxx" ] ]
+        [ H.p [ A.class "breadcrumbs" ]
+          [ H.span [] [ H.text "/" ]
+          ]
+        , H.h1 [] [ H.text "Recent episodes" ]
+        , H.div []
+          [ H.ul []
+            [ H.li [] []
+            , H.li []
+              [ H.a [ A.href "/episodes/curried-function" ]
+                [ H.h2 [] [ H.text "Curried function" ] ]
+              , H.span [ A.class "date" ] [ H.text "2023-05-01" ]
               ]
             ]
           ]

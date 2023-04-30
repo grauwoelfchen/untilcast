@@ -1,7 +1,7 @@
 module Components.Sidebar exposing (view)
 
-import Html exposing (Html)
-import Html.Attributes as Attr
+import Html as H exposing (Html)
+import Html.Attributes as A
 import View exposing (View)
 
 
@@ -9,16 +9,17 @@ view : { page : View msg } -> View msg
 view { page } =
   { title = page.title
   , body =
-    [ Html.div [ Attr.class "layout" ]
+    [ H.div [ A.class "layout" ]
       [ viewSidebar
-      , Html.div [ Attr.class "page" ] page.body
+      , H.div [ A.class "page" ] page.body
       ]
     ]
   }
 
 viewSidebar : Html msg
 viewSidebar =
-  Html.aside [ Attr.class "sidebar" ]
-    [ Html.a [ Attr.href "/" ] [ Html.text "Episodes" ]
-    , Html.a [ Attr.href "/settings" ] [ Html.text "Settings" ]
+  H.aside [ A.class "sidebar" ]
+    [ H.a [ A.href "/" ] [ H.text "Top" ]
+    , H.a [ A.href "/episodes", A.class "disabled", A.disabled True ] [ H.text "Episodes" ]
+    , H.a [ A.href "/settings" ] [ H.text "Settings" ]
     ]

@@ -5,4 +5,7 @@
 /node_modules
 *.pem
 
+/static/video/*
+!/static/video/.gitignore
+
 /NOTE.md

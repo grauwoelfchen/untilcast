@@ -1,8 +1,7 @@
 module Pages.Settings exposing (page)
 
 import Components.Sidebar
-import Html exposing (Html)
-import Layouts
+import Html as H exposing (Html)
 import View exposing (View)
 
 
@@ -12,8 +11,8 @@ page =
     { page =
       { title = "Pages.Settings"
       , body =
-        [ Html.text "/settings"
-        , Html.h1 [] [ Html.text "Settings" ]
+        [ H.text "/settings"
+        , H.h1 [] [ H.text "Settings" ]
         ]
       }
     }
