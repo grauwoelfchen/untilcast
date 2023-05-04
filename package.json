@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "build": "rm -fr dist/* && npx elm-land build",
     "server": "npx elm-land server"
   },
   "devDependencies": {
