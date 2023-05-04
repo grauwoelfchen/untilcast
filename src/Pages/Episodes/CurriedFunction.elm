@@ -54,7 +54,7 @@ page =
               H.h3 [] [ H.text "Screencast" ]
             , H.video [ A.class "video", A.controls True, A.width 770 ]
               [
-                H.source [ A.src "/video/curried-function-20230501.ogv" ] []
+                H.source [ A.src "/video/curried-function-20230501.mp4" ] []
               ]
             ]
           , H.div [ A.class "text" ]

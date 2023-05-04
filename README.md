@@ -4,7 +4,16 @@ UNutterd TIL screencasts. Learn something *until* kingdom come ;)
 
 https://untilcats.ch
 
+
+## Example
+
+### Screenshot
+
 ![Screenshot](img/screenshot.png?raw=true "Screenshot")
+
+### Screencast
+
+![Screencast](static/video/curried-function-20230501.mp4)
 
 
 ## Prerequisites
