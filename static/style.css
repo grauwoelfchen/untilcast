@@ -143,6 +143,7 @@ ul.tags li {
 
 .video {
   margin: 0.21rem 0;
+  width: auto;
   max-width: 55rem;
 }
 
