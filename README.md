@@ -13,7 +13,9 @@ https://untilcats.ch
 
 ### Screencast
 
-![Screencast](static/video/curried-function-20230501.mp4)
+![Example on GitLab.com](/static/video/curried-function-20230501.mp4)
+
+[![Example on GitHub](https://user-images.githubusercontent.com/163063/236181481-e27cc4fa-be6a-40a0-8ec7-e16e81333275.mp4)](https://user-images.githubusercontent.com/163063/236181481-e27cc4fa-be6a-40a0-8ec7-e16e81333275.mp4)
 
 
 ## Prerequisites
