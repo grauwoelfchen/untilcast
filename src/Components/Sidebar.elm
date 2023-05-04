@@ -19,7 +19,8 @@ view { page } =
 viewSidebar : Html msg
 viewSidebar =
   H.aside [ A.class "sidebar" ]
-    [ H.a [ A.href "/" ] [ H.text "Top" ]
+    [
+      H.a [ A.href "/", A.class "title" ] [ H.text "Until" ]
     , H.a [ A.href "/episodes", A.class "disabled", A.disabled True ] [ H.text "Episodes" ]
     , H.a [ A.href "/settings" ] [ H.text "Settings" ]
     ]

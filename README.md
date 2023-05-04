@@ -1,6 +1,6 @@
 # Until
 
-Unutterd TIL screencasts. Learn something until kingdom come ;)
+UNutterd TIL screencasts. Learn something *until* kingdom come ;)
 
 ![Screenshot](img/screenshot.png?raw=true "Screenshot")
 
@@ -30,7 +30,7 @@ Unutterd TIL screencasts. Learn something until kingdom come ;)
 
 
 ```txt
-TypoL
+Until
 Copyright (C) 2023 Yasuhiro Яша Asaka
 
 This program is free software: you can redistribute it and/or modify
