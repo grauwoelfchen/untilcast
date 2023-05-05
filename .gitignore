@@ -7,4 +7,6 @@
 
 /NOTE.md
 
-/static/assets/**/*
+/static/assets/**/*.css
+/static/assets/**/*.js
+/static/assets/**/*.*.map
