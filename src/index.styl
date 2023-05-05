@@ -1,5 +1,5 @@
-$nav-height = 3.4rem
 $background-color = #323232
+$navbar-height = 3.4rem
 $navbar-width = 16.82rem
 $top-color = #5f914a
 
@@ -20,15 +20,15 @@ body
   height 0
   left 0
   position sticky
-  top -($nav-height)
+  top -($navbar-height)
   z-index 1
 
 @media (min-width: 960px)
   .curtain
-    height $nav-height
+    height $navbar-height
 
 header
-  height $nav-height
+  height $navbar-height
   left 0
   position relative
   width 100%
@@ -47,7 +47,7 @@ header
         height 100%
         line-height 1.13em
         margin 0
-        padding 0.88rem 1.981rem 0.58rem 2.811rem
+        padding 0.97rem 1.981rem 0.72rem 2.811rem
         position relative
         max-width 100%
         width $navbar-width + 3rem
@@ -90,7 +90,7 @@ header
   flex-direction row
   gap 1.12rem
   left 0
-  padding 1.02rem 1.89rem 1.02rem 1.89rem
+  padding 0.82rem 1.89rem
   position sticky
   top 0
   transition opacity 0.4s, transform .243s ease
@@ -123,7 +123,6 @@ header
 
   .content
     padding 2.96rem 3.216rem
-    min-width 640px
 
 @media (min-width: 960px)
   .page
@@ -131,6 +130,7 @@ header
 
     .content
       padding 1.14rem 6.516rem 2.53rem 6.516rem
+      min-width 640px
 
 a
   color #878787
