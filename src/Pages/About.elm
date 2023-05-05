@@ -1,6 +1,6 @@
 module Pages.About exposing (page)
 
-import Components.Sidebar
+import Components.Navbar
 import Html as H exposing (Html)
 import Html.Attributes as A
 import View exposing (View)
@@ -8,11 +8,13 @@ import View exposing (View)
 
 page : View msg
 page =
-  Components.Sidebar.view
+  Components.Navbar.view
     { page =
       { title = "About - Until"
       , body =
-        [ H.text "/about"
+        [ H.p [ A.class "breadcrumbs" ]
+          [ H.span [] [ H.text "/about" ]
+          ]
         , H.p []
             [ H.span [] [ H.text "Until" ]
             , H.text """

@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
+import resolve from '@rollup/plugin-node-resolve';
 import stylus from 'rollup-plugin-stylus-compiler';
 import css from 'rollup-plugin-css-only';
 
@@ -18,7 +19,8 @@ const development = {
   , sourcemap: true
   }
 , plugins: [
-    stylus()
+    resolve()
+  , stylus()
   , css({
       output: function(data, _nodes) {
         const file = path.join(dst, 'css', 'style.css');
@@ -39,7 +41,8 @@ const production = {
   , sourcemap: false
   }]
 , plugins: [
-    stylus()
+    resolve()
+  , stylus()
   , css({
       output: function(data, _nodes) {
         const file = path.join(dst, 'css', 'style.css');

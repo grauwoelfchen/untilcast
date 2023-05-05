@@ -1,6 +1,6 @@
 module Pages.Home_ exposing (page, Model, Msg)
 
-import Components.Sidebar
+import Components.Navbar
 import Html as H exposing (Html)
 import Html.Attributes as A
 import Http
@@ -62,7 +62,7 @@ subscriptions model =
 
 view : Model -> View Msg
 view model =
-  Components.Sidebar.view
+  Components.Navbar.view
     { page =
       { title = "Until"
       , body =

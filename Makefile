@@ -25,3 +25,7 @@ build: build\:debug
 server: build\:asset\:debug
 	@npx elm-land server
 .PHONY: server
+
+watch\:asset:
+	npx rollup -w -c --configBuildDebug --bundleConfigAsCjs
+.PHONY: watch\:asset

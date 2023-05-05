@@ -1,6 +1,6 @@
 module Pages.Episodes.Slug_ exposing (Model, Msg, page)
 
-import Components.Sidebar
+import Components.Navbar
 import Html as H exposing (Html)
 import Html.Attributes as A
 import Http
@@ -59,7 +59,7 @@ subscriptions model =
 
 view : { slug: String } -> Model -> View Msg
 view params model =
-  Components.Sidebar.view
+  Components.Navbar.view
     { page =
       { title = params.slug ++ " - Until"
       , body =
@@ -104,7 +104,7 @@ viewEpisode episode =
           H.div [ A.class "description" ] [ toHtml episode.description ]
         , H.div [ A.class "screencast" ] [
             H.h3 [] [ H.text "Screencast" ]
-          , H.video [ A.class "video", A.controls True, A.width 770 ]
+          , H.video [ A.class "video", A.controls True ]
             [
               H.source [ A.src ("/video/" ++ episode.slug ++ "-"
                 ++ String.replace "-" "" episode.created_at ++ ".mp4") ] []
