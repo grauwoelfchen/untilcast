@@ -31,7 +31,7 @@ init : ( Model, Cmd Msg )
 init =
   ( { episodes = API.Loading }
   , API.Episodes.getRecent
-      { onResponse = APIResponded 
+      { onResponse = APIResponded
       }
   )
 
