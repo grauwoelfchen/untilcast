@@ -19,7 +19,11 @@ view { page } =
                   [
                     H.div [ A.class "title" ]
                       [
-                        H.a [ A.href "/", A.class "title" ] [ H.text "Until" ]
+                        H.a [ A.href "/", A.class "title" ]
+                          [
+                            H.div [ A.class "square" ] []
+                          , H.text "Until"
+                          ]
                       ]
                   , H.div [ A.class "content" ]
                       [

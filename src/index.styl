@@ -53,6 +53,9 @@ header
         width $navbar-width + 3rem
 
         a
+          display flex
+          align-items center
+
           &.title, &.title:visited
             color #ababab
             font-family sans-serif
@@ -181,6 +184,45 @@ ul
     font-weight normal
     padding 0
     margin 0.165rem 0 0.1946rem 0
+
+.square
+  animation-name dancing-square
+  animation-duration 4.1s
+  animation-direction alternate-reverse
+  animation-iteration-count infinite
+  background-image linear-gradient(to right, #1a0045, #e64c3d)
+  clip-path polygon(18% 0%, 81% 0, 100% 100%, 0% 91%)
+  height 24px
+  margin-right 0.812rem
+  margin-top -0.21rem
+  width 24px
+
+@keyframes dancing-square
+  9%
+    background-image linear-gradient(to right, #f0c27b, #4b1248)
+    clip-path polygon(21% 0%, 100% 33%, 74% 100%, 10% 94%)
+  20%
+    background-image linear-gradient(to right, #32cd05, #00d2ff)
+    clip-path polygon(31% 9%, 95% 33%, 61% 90%, 32% 84%)
+  51%
+    background-image linear-gradient(to right, #00d2ff, #3a7bd5)
+    clip-path polygon(81% 53%, 100% 39%, 44% 89%, 10% 70%)
+  69%
+    background-image linear-gradient(to right, #c21500, #ffc500)
+    clip-path polygon(41% 94%, 98% 21%, 53% 81%, 73% 71%)
+  78%
+    background-image linear-gradient(to right, #5205f1, #32cd05)
+    clip-path polygon(9% 34%, 78% 11%, 21% 51%, 93% 58%)
+  90%
+    background-image linear-gradient(to right, #ffc500, #32cd05)
+    clip-path polygon(20% 12%, 97% 29%, 66% 67%, 10% 81%)
+  98%
+    background-image linear-gradient(to right, #926c01, #59a540)
+    clip-path polygon(22% 3%, 90% 21%, 71% 98%, 13% 91%)
+
+.logo
+  display block
+  margin 0.11rem 0 1.21rem
 
 blockquote
   background #111111

@@ -16,7 +16,9 @@ page =
           [ H.span [] [ H.text "/about" ]
           ]
         , H.p []
-            [ H.span [] [ H.text "Until" ]
+            [
+              H.img [ A.src "/assets/img/logo.png", A.class "logo" ] []
+            , H.span [] [ H.text "Until" ]
             , H.text """
 — untilcats.ch (yes, it's *cats*, not cast.
 I just pretended to make a cute typo ha ha) — is an experimental space for
