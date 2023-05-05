@@ -20,9 +20,11 @@
         }
       ]
     , "link": [
-        { "rel": "stylesheet", "href": "/style.css" }
+        { "rel": "stylesheet", "href": "/assets/css/style.css" }
       ]
-    , "script": []
+    , "script": [
+        { "type": "text/javascript", "src": "/assets/js/script.js" }
+      ]
     }
   , "router": {
       "useHashRouting": false

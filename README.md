@@ -30,10 +30,18 @@ https://untilcats.ch
 ```
 
 
+## Build
+
+```zsh
+# development
+% make build
+```
+
+
 ## Development
 
 ```zsh
-% npx elm-land server
+% make server
 ```
 
 

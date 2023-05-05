@@ -6,3 +6,5 @@
 *.pem
 
 /NOTE.md
+
+/static/assets/**/*

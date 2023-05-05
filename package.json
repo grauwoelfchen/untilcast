@@ -1,10 +1,17 @@
 {
   "name": "until",
+  "type": "module",
   "scripts": {
-    "build": "rm -fr dist/* && npx elm-land build",
-    "server": "npx elm-land server"
+    "build:debug": "make build:debug",
+    "build:release": "make build:release",
+    "build": "make build:release",
+    "server": "make server"
   },
   "devDependencies": {
-    "elm-land": "^0.18.1"
+    "elm-land": "^0.18.1",
+    "rollup": "^3.21.5",
+    "rollup-plugin-css-only": "^4.3.0",
+    "rollup-plugin-stylus-compiler": "^1.0.1",
+    "styr": "^0.0.32"
   }
 }
