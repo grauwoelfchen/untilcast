@@ -15,7 +15,7 @@ page =
         [ H.text "/about"
         , H.p [] [ H.text """
 Until — untilcats.ch (yes, it's *cats*, not cast.
-I just pretended a cute typo ha ha) — is an experimental space for
+I just pretended to make a cute typo ha ha) — is an experimental space for
 my miscellaneous UNuttered TIL (Today I Learnt) screencasts.
 Let's see what I can :)
 """ ]
