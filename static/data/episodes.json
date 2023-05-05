@@ -1,0 +1,19 @@
+{
+  "count": 2
+, "next": null
+, "previous": null
+, "results": [
+    {
+      "number": 1
+    , "slug": "dns-caa-resource-record-check"
+    , "title": "DNS CAA resource record check"
+    , "created_at": "2023-05-05"
+    }
+  , {
+      "number": 0
+    , "slug": "curried-function"
+    , "title": "Curried function"
+    , "created_at": "2023-05-01"
+    }
+  ]
+}

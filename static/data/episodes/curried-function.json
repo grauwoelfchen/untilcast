@@ -1,0 +1,12 @@
+{
+  "number": 0
+, "slug": "curried-function"
+, "title": "Curried function"
+, "description": "<p>I've just started reading a book about Elm.</p><blockquote cite=\"https://pragprog.com/titles/jfelm/programming-elm/\"><p>Create curried functions, partially apply arguments</p><figcaption>— <a href=\"https://pragprog.com/titles/jfelm/programming-elm/\"><cite>Programming Elm</cite></a></figcaption></blockquote>"
+, "note": "```language-zsh\n% elm repl\n...\n> sayHello greeting name = greeting ++ \", \" ++ name ++ \"!\"\n<function> : String -> String -> String\n> sayHello \"Hello\" \"Yasha\"\n\"Hello, Yasha!\" : String\n> hoi = sayHello \"Hoi\"\n<function> : String -> String\n> hoi \"Yasha\"\n\"Hoi, Yasha!\" : String\n```"
+, "tags": [
+    "Elm"
+  , "REPL"
+  ]
+, "created_at": "2023-05-01"
+}
