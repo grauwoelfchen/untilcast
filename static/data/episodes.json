@@ -6,8 +6,8 @@
     {
       "number": 1
     , "slug": "dns-caa-resource-record-check"
-    , "title": "WIP: DNS CAA resource record check"
-    , "created_at": "2023-05-05"
+    , "title": "DNS CAA resource record check"
+    , "created_at": "2023-05-18"
     }
   , {
       "number": 0

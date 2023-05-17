@@ -1,11 +1,11 @@
 {
   "number": 1
 , "slug": "dns-caa-resource-record-check"
-, "title": "WIP: DNS CAA resource record check"
-, "description": "Stay tuned!"
-, "note": "..."
+, "title": "DNS CAA resource record check"
+, "description": "<p>I've made sure that CAA prevents unexpected cert issues.</p><p>Although it seems that Let's Encrypt and SSL.com I used here don't support <code>iodef</code> at the moment, I could check those certificate issuances by using them were blocked as expected and failed."
+, "note": "In the screencast above, I accidentally fogot to type some options like `--agree-tos` or `--email` etc. and should have specified `--dns-dnsimple-propagation-seconds` too... XD\n#### Snippet\n```\n% dig caa test.grauwoelfchen.net\n% dig test.grauwoelfchen.net type257\n\n% equery meta certbot\n% equery meta certbot-dns-dnsimple\n\n# let's encrypt\n% certbot certonly --dns-dnsimple \\\n  --dns-dnsimple-credentials ~/.config/certbot/dnsimple.ini \\\n  -d 'test.grauwoelfchen.net' \\\n  --email=<email> --agree-tos \\\n  --config-dir /tmp/test --work-dir /tmp/test --logs-dir /tmp/test\n\n# ssl.com\n% certbot certonly --dns-dnsimple \\\n  --dns-dnsimple-credentials ~/.config/certbot/dnsimple.ini  \\\n  --server https://acme.ssl.com/sslcom-dv-rsa \\\n  --key-type rsa --eab-hmac-key $EAB_HMAC_KEY --eab-kid $EAB_KID \\\n  -d 'test.grauwoelfchen.net' \\\n  --email=<email> --agree-tos \\\n  --config-dir /tmp/test --logs-dir /tmp/test --work-dir /tmp/test```\n#### Links\n* [What's CAA record? - DNSimple Help](https://support.dnsimple.com/articles/caa-record/)\n* [Who Supports CAA Records?](https://sslmate.com/caa/support)\n* [Certificate Authority Authorization (CAA) - Let's Encrypt](https://letsencrypt.org/docs/caa/)\n* [ISRG CP/CPS v5.1 - Let's Encrypt](https://letsencrypt.org/documents/isrg-cp-cps-v5.1/)\n* [SSL/TLS Certificate Issuance and Revocation with ACME - SSL.com](https://www.ssl.com/guide/ssl-tls-certificate-issuance-and-revocation-with-acme/)\n* [Certbot Instructions | Certbot](https://certbot.eff.org/instructions?ws=webproduct&os=gentoo)\n* [Welcome to certbot-dns-dnsimple’s documentation! — certbot-dns-dnsimple 0 documentation](https://certbot-dns-dnsimple.readthedocs.io/en/stable/)"
 , "tags": [
     "DNS"
   ]
-, "created_at": "2023-05-05"
+, "created_at": "2023-05-18"
 }
