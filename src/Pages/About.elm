@@ -19,15 +19,13 @@ page =
             [
               H.img [ A.src "/assets/img/logo.png", A.class "logo" ] []
             , H.span [] [ H.text "Untilcast" ]
-            , H.text """
-— untilcats.ch (yes, it's *cats*, not cast.
-I just pretended to make a cute typo ha ha) — is an experimental space for
-my miscellaneous UNuttered TIL (Today I Learnt) screencasts.
-Let's see what I can do :)
+            , H.i [] [ H.text "—untilcats.ch (yes, it's *cats*, not cast. I pretended to make a cute typo, ha ha)—" ]
+            , H.text """is an experimental space for
+my miscellaneous UNuttered TIL (Today I Learnt) screencasts. Briefly speaking, it's a something like Video in the Void!
 """
             ]
-        , H.p [] [ H.text "I'm very whimsical. Miaow!!" ]
-        , H.p [] [ H.text "#HackingInTheVoid" ]
+        , H.p [] [ H.text "I'm very whimsical. Let's see what I can do :)" ]
+        , H.p [] [ H.text "Miaow!!" ]
         , H.p [] [
             H.a [ A.href "https://gitlab.com/grauwoelfchen/until" ]
               [ H.text "Source code" ]
