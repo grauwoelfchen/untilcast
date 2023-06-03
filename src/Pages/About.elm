@@ -10,7 +10,7 @@ page : View msg
 page =
   Components.Navbar.view
     { page =
-      { title = "About - Until"
+      { title = "About - Untilcast"
       , body =
         [ H.p [ A.class "breadcrumbs" ]
           [ H.span [] [ H.text "/about" ]
@@ -18,7 +18,7 @@ page =
         , H.p []
             [
               H.img [ A.src "/assets/img/logo.png", A.class "logo" ] []
-            , H.span [] [ H.text "Until" ]
+            , H.span [] [ H.text "Untilcast" ]
             , H.text """
 — untilcats.ch (yes, it's *cats*, not cast.
 I just pretended to make a cute typo ha ha) — is an experimental space for

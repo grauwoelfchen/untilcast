@@ -22,7 +22,7 @@ view { page } =
                         H.a [ A.href "/", A.class "title" ]
                           [
                             H.div [ A.class "square" ] []
-                          , H.text "Until"
+                          , H.text "Untilcast"
                           ]
                       ]
                   , H.div [ A.class "content" ]

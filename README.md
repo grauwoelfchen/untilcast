@@ -1,4 +1,4 @@
-# Until
+# Untilcast
 
 UNutterd TIL screencasts. Learn something *until* kingdom come ;)
 
@@ -51,7 +51,7 @@ https://untilcats.ch
 
 
 ```txt
-Until
+Untilcast
 Copyright (C) 2023 Yasuhiro Яша Asaka
 
 This program is free software: you can redistribute it and/or modify

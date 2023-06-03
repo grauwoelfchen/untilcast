@@ -1,5 +1,5 @@
 {
-  "name": "until",
+  "name": "untilcast",
   "type": "module",
   "scripts": {
     "build:debug": "make build:debug",

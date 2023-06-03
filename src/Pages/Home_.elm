@@ -64,7 +64,7 @@ view : Model -> View Msg
 view model =
   Components.Navbar.view
     { page =
-      { title = "Until"
+      { title = "Untilcast"
       , body =
         [ H.p [ A.class "breadcrumbs" ]
           [ H.span [] [ H.text "/" ]
