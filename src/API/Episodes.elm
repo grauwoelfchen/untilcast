@@ -5,7 +5,8 @@ module API.Episodes exposing
   )
 
 import Http
-import Json.Decode as Decode
+import Json.Decode exposing (Decoder, int, list, nullable, string, succeed)
+import Json.Decode.Pipeline exposing (required)
 
 
 getRecent :
@@ -25,14 +26,13 @@ type alias Episodes =
   , results : List Episode
   }
 
-decoder : Decode.Decoder Episodes
+decoder : Decoder Episodes
 decoder =
-  Decode.map4
-    Episodes
-    (Decode.field "count" Decode.int)
-    (Decode.maybe (Decode.field "next" Decode.string))
-    (Decode.maybe (Decode.field "previous" Decode.string))
-    (Decode.field "results" (Decode.list episodeDecoder))
+  succeed Episodes
+    |> required "count" int
+    |> required "next" (nullable string)
+    |> required "previous" (nullable string)
+    |> required "results" (list episodeDecoder)
 
 {-| Episode is a subset of full version from API.Episode. -}
 type alias Episode =
@@ -43,11 +43,10 @@ type alias Episode =
   , created_at: String
   }
 
-episodeDecoder : Decode.Decoder Episode
+episodeDecoder : Decoder Episode
 episodeDecoder =
-  Decode.map4
-    Episode
-    (Decode.field "number" Decode.int)
-    (Decode.field "slug" Decode.string)
-    (Decode.field "title" Decode.string)
-    (Decode.field "created_at" Decode.string)
+  succeed Episode
+    |> required "number" int
+    |> required "slug" string
+    |> required "title" string
+    |> required "created_at" string

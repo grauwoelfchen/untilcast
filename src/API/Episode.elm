@@ -1,7 +1,8 @@
 module API.Episode exposing (get, Episode)
 
 import Http
-import Json.Decode as Decode
+import Json.Decode exposing (Decoder, int, field, list, map7, succeed, string)
+import Json.Decode.Pipeline exposing (required)
 
 
 get :
@@ -28,14 +29,13 @@ type alias Episode =
   , created_at: String
   }
 
-decoder : Decode.Decoder Episode
+decoder : Decoder Episode
 decoder =
-  Decode.map7
-    Episode
-    (Decode.field "number" Decode.int)
-    (Decode.field "slug" Decode.string)
-    (Decode.field "title" Decode.string)
-    (Decode.field "description" Decode.string)
-    (Decode.field "note" Decode.string)
-    (Decode.field "tags" (Decode.list Decode.string))
-    (Decode.field "created_at" Decode.string)
+  succeed Episode
+    |> required "number" int
+    |> required "slug" string
+    |> required "title" string
+    |> required "description" string
+    |> required "note" string
+    |> required "tags" (list string)
+    |> required "created_at" string
