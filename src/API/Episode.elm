@@ -1,9 +1,8 @@
 module API.Episode exposing (get, Episode)
 
 import Http
-import Json.Decode exposing (Decoder, int, field, list, map7, succeed, string)
+import Json.Decode exposing (Decoder, int, list, succeed, string)
 import Json.Decode.Pipeline exposing (required)
-
 
 get :
   { slug : String
@@ -19,8 +18,7 @@ get options =
 entry.
 -}
 type alias Episode =
-  {
-    number: Int
+  { number: Int
   , slug: String
   , title: String
   , description: String

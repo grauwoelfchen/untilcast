@@ -1,8 +1,8 @@
 module Pages.Episodes.Slug_ exposing (Model, Msg, page)
 
 import Components.Navbar
-import Html as H exposing (Html)
-import Html.Attributes as A
+import Html exposing (..)
+import Html.Attributes exposing (..)
 import Http
 import Markdown
 import Page exposing (Page)
@@ -10,7 +10,6 @@ import View exposing (View)
 
 import API
 import API.Episode exposing (Episode)
-
 
 page : { slug : String } -> Page Model Msg
 page params =
@@ -54,7 +53,7 @@ update msg model =
       )
 
 subscriptions : Model -> Sub Msg
-subscriptions model =
+subscriptions _ =
   Sub.none
 
 view : { slug: String } -> Model -> View Msg
@@ -63,57 +62,55 @@ view params model =
     { page =
       { title = params.slug ++ " - Untilcast"
       , body =
-        [ H.p [ A.class "breadcrumbs" ]
-          [ H.span [] [ H.text "/" ]
-          , H.span [] [ H.a
-            [ A.href "/episodes"
-            , A.class "disabled"
-            , A.disabled True
-            ] [ H.text "episodes" ]]
-          , H.span [] [ H.text "/" ]
-          , H.span [] [ H.text params.slug ]
-          ]
+        [ p [ class "breadcrumbs" ]
+            [ span [] [ text "/" ]
+            , span [] [ a
+                [ href "/episodes"
+                , class "disabled"
+                , disabled True
+                ] [ text "episodes" ]]
+            , span [] [ text "/" ]
+            , span [] [ text params.slug ]
+            ]
         , case model.episode of
             API.Loading ->
-              H.div [ A.class "loading" ] [ H.text "Loading..." ]
+              div [ class "loading" ] [ text "Loading..." ]
             API.Success episode ->
               viewEpisode episode
             API.Failure httpError ->
-              H.div [] [ H.text (API.toMessage httpError) ]
+              div [] [ text (API.toMessage httpError) ]
         ]
       }
     }
 
 viewEpisode : Episode -> Html msg
 viewEpisode episode =
-  H.div []
-    [ H.div []
-      [ H.h1 [] [ H.text episode.title ]
-      , H.span [ A.class "number" ]
-          [ H.text ("#" ++ String.fromInt(episode.number)) ]
-      , H.span [ A.class "date" ] [ H.text episode.created_at ]
+  div []
+    [ div []
+      [ h1 [] [ text episode.title ]
+      , span [ class "number" ]
+          [ text ("#" ++ String.fromInt(episode.number)) ]
+      , span [ class "date" ] [ text episode.created_at ]
       ]
-    , H.ul [ A.class "tags" ]
+    , ul [ class "tags" ]
         (List.map
-          (\tag -> H.li []
-            [ H.span [ A.class "tag" ] [ H.text tag ] ])
+          (\tag -> li []
+            [ span [ class "tag" ] [ text tag ] ])
           episode.tags
         )
-    , H.div []
-        [
-          H.div [ A.class "description" ] [ toHtml episode.description ]
-        , H.div [ A.class "screencast" ] [
-            H.h3 [] [ H.text "Screencast" ]
-          , H.video [ A.class "video", A.controls True ]
-            [
-              H.source [ A.src ("/video/" ++ episode.slug ++ "-"
+    , div []
+        [ div [ class "description" ] [ toHtml episode.description ]
+        , div [ class "screencast" ] [
+            h3 [] [ text "Screencast" ]
+          , video [ class "video", controls True ]
+              [ source [ src ("/video/" ++ episode.slug ++ "-"
                 ++ String.replace "-" "" episode.created_at ++ ".mp4") ] []
+              ]
+          ]
+        , div [ class "text" ]
+            [ h3 [] [ text "Note" ]
+            , toHtml episode.note
             ]
-          ]
-        , H.div [ A.class "text" ]
-          [ H.h3 [] [ H.text "Note" ]
-          , toHtml episode.note
-          ]
         ]
       ]
 
@@ -121,8 +118,7 @@ toHtml : String -> Html msg
 toHtml s =
   -- TODO: sanitize = True
   Markdown.toHtmlWith
-    {
-      defaultHighlighting = Just "text"
+    { defaultHighlighting = Just "text"
     , sanitize = False
     , githubFlavored = Just { tables = True, breaks = False }
     , smartypants = False

@@ -1,15 +1,14 @@
 module Pages.Home_ exposing (page, Model, Msg)
 
 import Components.Navbar
-import Html as H exposing (Html)
-import Html.Attributes as A
+import Html exposing (..)
+import Html.Attributes exposing (..)
 import Http
 import Page exposing (Page)
 import View exposing (View)
 
 import API
 import API.Episodes exposing (Episode, Episodes)
-
 
 page : Page Model Msg
 page =
@@ -55,7 +54,7 @@ update msg model =
 -- subscriptions
 
 subscriptions: Model -> Sub Msg
-subscriptions model =
+subscriptions _ =
   Sub.none
 
 -- view
@@ -66,37 +65,37 @@ view model =
     { page =
       { title = "Untilcast"
       , body =
-        [ H.p [ A.class "breadcrumbs" ]
-          [ H.span [] [ H.text "/" ]
+        [ p [ class "breadcrumbs" ]
+          [ span [] [ text "/" ]
           ]
-        , H.h1 [] [ H.text "Recent episodes" ]
+        , h1 [] [ text "Recent episodes" ]
         , case model.episodes of
             API.Loading ->
-              H.div [ A.class "loading" ] [ H.text "Loading..." ]
+              div [ class "loading" ] [ text "Loading..." ]
             API.Success episodes ->
               viewEpisodesList episodes
             API.Failure httpError ->
-              H.div [] [ H.text (API.toMessage httpError) ]
+              div [] [ text (API.toMessage httpError) ]
         ]
       }
     }
 
 viewEpisodesList : Episodes -> Html Msg
 viewEpisodesList episodes =
-  H.div []
+  div []
     (List.indexedMap viewEpisode episodes.results)
 
 viewEpisode : Int -> Episode -> Html Msg
-viewEpisode index episode =
-  H.div []
-    [ H.ul []
-      [ H.li [] []
-      , H.li []
-        [ H.a [ A.href ("/episodes/" ++ episode.slug) ]
-          [ H.h2 [] [ H.text episode.title ] ]
-        , H.span [ A.class "number" ]
-            [ H.text ("#" ++ String.fromInt(episode.number)) ]
-        , H.span [ A.class "date" ] [ H.text episode.created_at ]
+viewEpisode _ episode =
+  div []
+    [ ul []
+      [ li [] []
+      , li []
+        [ a [ href ("/episodes/" ++ episode.slug) ]
+          [ h2 [] [ text episode.title ] ]
+        , span [ class "number" ]
+            [ text ("#" ++ String.fromInt(episode.number)) ]
+        , span [ class "date" ] [ text episode.created_at ]
         ]
       ]
     ]

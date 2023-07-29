@@ -8,7 +8,6 @@ import Http
 import Json.Decode exposing (Decoder, int, list, nullable, string, succeed)
 import Json.Decode.Pipeline exposing (required)
 
-
 getRecent :
   { onResponse : Result Http.Error Episodes -> msg
   }
@@ -36,8 +35,7 @@ decoder =
 
 {-| Episode is a subset of full version from API.Episode. -}
 type alias Episode =
-  {
-    number: Int
+  { number: Int
   , slug: String
   , title: String
   , created_at: String
