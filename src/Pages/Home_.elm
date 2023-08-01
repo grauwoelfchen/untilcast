@@ -4,6 +4,7 @@ import Components.Navbar
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Http
+import Route.Path
 import Page exposing (Page)
 import View exposing (View)
 
@@ -91,7 +92,8 @@ viewEpisode _ episode =
     [ ul []
       [ li [] []
       , li []
-        [ a [ href ("/episodes/" ++ episode.slug) ]
+        [ a [ Route.Path.href (
+            Route.Path.Episodes_Slug_ { slug = episode.slug }) ]
           [ h2 [] [ text episode.title ] ]
         , span [ class "number" ]
             [ text ("#" ++ String.fromInt(episode.number)) ]

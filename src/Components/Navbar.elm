@@ -2,6 +2,7 @@ module Components.Navbar exposing (view)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
+import Route.Path
 import View exposing (View)
 
 view : { page : View msg } -> View msg
@@ -13,14 +14,15 @@ view { page } =
         [ div [ class "nav" ]
           [ div [ class "container" ]
             [ div [ class "title" ]
-              [ a [ href "/", class "title" ]
+              [ a [ Route.Path.href Route.Path.Home_
+                  , class "title"
+                  ]
                   [ div [ class "square" ] []
                   , text "Untilcast"
                   ]
               ]
             , div [ class "content" ]
-                [
-                  -- nav
+                [ -- nav
                 ]
             ]
           ]
@@ -38,7 +40,8 @@ viewNavbar : Html msg
 viewNavbar =
   aside [ class "navbar" ]
     [ div [ class "curtain" ] []
-    , a [ href "/episodes", class "disabled", disabled True ]
+    , a [ Route.Path.href Route.Path.Home_ ]
         [ text "Episodes" ]
-    , a [ href "/about" ] [ text "About" ]
+    , a [ Route.Path.href Route.Path.About ]
+        [ text "About" ]
     ]

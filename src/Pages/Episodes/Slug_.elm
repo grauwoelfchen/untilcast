@@ -6,6 +6,7 @@ import Html.Attributes exposing (..)
 import Http
 import Markdown
 import Page exposing (Page)
+import Route.Path
 import View exposing (View)
 
 import API
@@ -65,10 +66,9 @@ view params model =
         [ p [ class "breadcrumbs" ]
             [ span [] [ text "/" ]
             , span [] [ a
-                [ href "/episodes"
-                , class "disabled"
-                , disabled True
-                ] [ text "episodes" ]]
+                [ Route.Path.href Route.Path.Home_]
+                [ text "episodes" ]
+                ]
             , span [] [ text "/" ]
             , span [] [ text params.slug ]
             ]
