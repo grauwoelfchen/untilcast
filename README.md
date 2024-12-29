@@ -1,6 +1,6 @@
 # Untilcats
 
-![Logo](img/logo-x255.png?raw=true "Logo")
+![Icon](img/icon.png?raw=true "Icon")
 
 UNutterd TIL screenCASTS. Learn something with *until* kingdom come ;)
 
