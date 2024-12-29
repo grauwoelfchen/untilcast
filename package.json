@@ -1,5 +1,5 @@
 {
-  "name": "untilcast",
+  "name": "untilcats",
   "type": "module",
   "scripts": {
     "build:debug": "make build:debug",

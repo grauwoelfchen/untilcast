@@ -9,28 +9,28 @@ page : View msg
 page =
   Components.Navbar.view
     { page =
-      { title = "About - Untilcast"
+      { title = "About - Untilcats"
       , body =
         [ p [ class "breadcrumbs" ]
             [ span [] [ text "/about" ]
             ]
         , p []
             [ img [ src "/assets/img/logo.png", class "logo" ] []
-            , span [] [ text "Untilcast" ]
+            , span [] [ text "Untilcats" ]
             , i [] [ text """
-—untilcats.ch (yes, it's *cats*, not cast.
+—Untilcats (yes, it's *cats*, not cast.
 I pretended to make a cute typo, ha ha)—
 """
             ]
             , text """is an experimental space for
-my miscellaneous UNuttered TIL (Today I Learnt) screencasts.
+my miscellaneous UNuttered TIL (Today I Learnt) screenCASTS.
 Briefly speaking, it's a something like Video in the Void!
 """
             ]
         , p [] [ text "I'm very whimsical. Let's see what I can do :)" ]
         , p [] [ text "Miaow!!" ]
         , p [] [
-            a [ href "https://gitlab.com/grauwoelfchen/until" ]
+            a [ href "https://gitlab.com/grauwoelfchen/untilcast" ]
               [ text "Source code" ]
           ]
         ]

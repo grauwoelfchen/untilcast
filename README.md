@@ -1,8 +1,11 @@
-# Untilcast
+# Untilcats
 
-UNutterd TIL screencasts. Learn something *until* kingdom come ;)
+![Logo](img/logo-x255.png?raw=true "Logo")
 
-https://untilcats.ch
+UNutterd TIL screenCASTS. Learn something with *until* kingdom come ;)
+
+~~https://untilcats.ch~~  
+https://video.grauwoelfchen.net
 
 
 ## Example
@@ -51,7 +54,7 @@ https://untilcats.ch
 
 
 ```txt
-Untilcast
+Untilcats
 Copyright (C) 2023-2024 Yasha
 
 This program is free software: you can redistribute it and/or modify
