@@ -18,8 +18,8 @@ page =
             [ img [ src "/assets/img/logo.png", class "logo" ] []
             , span [] [ text "Untilcats" ]
             , i [] [ text """
-—Untilcats (yes, it's *cats*, not cast.
-I pretended to make a cute typo, ha ha)—
+—yes, it's *cats*, not cast.
+I pretended to make a cute typo, ha ha—
 """
             ]
             , text """is an experimental space for

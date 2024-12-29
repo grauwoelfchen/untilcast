@@ -61,7 +61,7 @@ view : { slug: String } -> Model -> View Msg
 view params model =
   Components.Navbar.view
     { page =
-      { title = params.slug ++ " - Untilcast"
+      { title = params.slug ++ " - Untilcats"
       , body =
         [ p [ class "breadcrumbs" ]
             [ span [] [ text "/" ]

@@ -18,7 +18,7 @@ view { page } =
                   , class "title"
                   ]
                   [ div [ class "square" ] []
-                  , text "Untilcast"
+                  , text "Untilcats"
                   ]
               ]
             , div [ class "content" ]
