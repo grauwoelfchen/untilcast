@@ -52,7 +52,7 @@ https://untilcats.ch
 
 ```txt
 Untilcast
-Copyright (C) 2023 Yasuhiro Яша Asaka
+Copyright (C) 2023-2024 Yasha
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
