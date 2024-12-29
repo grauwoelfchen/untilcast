@@ -1,2 +1,6 @@
-https://until-c0j.pages.dev/*
+https://:project.pages.dev/*
   X-Robots-Tag: noindex
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Option: nosniff
+  Referrer-Policy: no-referrer
